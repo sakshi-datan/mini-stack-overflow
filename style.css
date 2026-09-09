@@ -1,0 +1,494 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f9fa;
+    color: #232629;
+}
+
+
+/* ================= HEADER ================= */
+
+.top-header {
+    height: 60px;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 30px;
+    gap: 40px;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #f48024;
+}
+
+.search-container {
+    flex: 1;
+    max-width: 700px;
+}
+
+.search-container input {
+    width: 100%;
+
+    padding: 10px 14px;
+
+    border: 1px solid #babfc4;
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+.search-container input:focus {
+    outline: none;
+    border-color: #0077cc;
+}
+
+
+/* ================= LAYOUT ================= */
+
+.layout {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    width: 200px;
+
+    min-height: calc(100vh - 60px);
+
+    padding: 25px 10px;
+
+    border-right: 1px solid #ddd;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar a {
+    text-decoration: none;
+
+    color: #3b4045;
+
+    padding: 12px;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #e1e4e6;
+    font-weight: bold;
+}
+
+
+/* ================= MAIN CONTENT ================= */
+
+.main-content {
+    flex: 1;
+
+    padding: 35px;
+}
+
+
+/* Page header */
+
+.page-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    font-size: 28px;
+}
+
+.page-header p {
+    margin-top: 8px;
+    color: #6a737c;
+}
+
+
+/* ================= BUTTON ================= */
+
+.primary-btn {
+    background: #0a95ff;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    padding: 11px 17px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.primary-btn:hover {
+    background: #0074cc;
+}
+
+
+/* ================= STATISTICS ================= */
+
+.stats {
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.stat-box {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    padding: 15px 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.stat-box strong {
+    font-size: 20px;
+}
+
+.stat-box span {
+    color: #6a737c;
+    font-size: 13px;
+}
+
+
+/* ================= QUESTIONS ================= */
+
+.questions-list {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+}
+
+.question-card {
+    padding: 22px;
+
+    border-bottom: 1px solid #ddd;
+
+    display: flex;
+
+    gap: 20px;
+}
+
+.question-card:last-child {
+    border-bottom: none;
+}
+
+
+/* Vote section */
+
+.vote-section {
+    min-width: 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.vote-btn {
+    border: 1px solid #ddd;
+
+    background: white;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    padding: 5px 10px;
+
+    font-size: 15px;
+}
+
+.vote-btn:hover {
+    background: #eff0f1;
+}
+
+.vote-number {
+    font-weight: bold;
+}
+
+
+/* Question content */
+
+.question-content {
+    flex: 1;
+}
+
+.question-title {
+    color: #0074cc;
+
+    font-size: 19px;
+
+    margin-bottom: 10px;
+
+    cursor: pointer;
+}
+
+.question-title:hover {
+    color: #0a95ff;
+}
+
+.question-description {
+    color: #3b4045;
+
+    line-height: 1.5;
+
+    margin-bottom: 12px;
+}
+
+
+/* Tags */
+
+.tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+.tag {
+    background: #eff0f1;
+
+    color: #3b4045;
+
+    padding: 5px 8px;
+
+    border-radius: 4px;
+
+    font-size: 12px;
+}
+
+
+/* Answer count */
+
+.question-info {
+    margin-top: 12px;
+
+    color: #6a737c;
+
+    font-size: 13px;
+}
+
+
+/* ================= MODAL ================= */
+
+.modal {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 200;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+
+    width: 90%;
+
+    max-width: 600px;
+
+    padding: 30px;
+
+    border-radius: 8px;
+
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 25px;
+}
+
+.close-btn {
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    background: none;
+
+    border: none;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    color: #6a737c;
+}
+
+
+/* Form */
+
+#questionForm {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+#questionForm label {
+    font-weight: bold;
+
+    margin-top: 8px;
+}
+
+#questionForm input,
+#questionForm textarea {
+    padding: 12px;
+
+    border: 1px solid #babfc4;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+}
+
+#questionForm textarea {
+    min-height: 140px;
+
+    resize: vertical;
+}
+
+#questionForm input:focus,
+#questionForm textarea:focus {
+    outline: none;
+
+    border-color: #0077cc;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .top-header {
+        padding: 0 15px;
+
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .layout {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+
+        min-height: auto;
+
+        border-right: none;
+
+        border-bottom: 1px solid #ddd;
+
+        padding: 10px;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+    }
+
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    .page-header {
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .page-header h1 {
+        font-size: 23px;
+    }
+
+    .stats {
+        flex-wrap: wrap;
+    }
+
+    .question-card {
+        padding: 15px;
+
+        gap: 10px;
+    }
+
+    .vote-section {
+        min-width: 50px;
+    }
+
+    .question-title {
+        font-size: 17px;
+    }
+}
